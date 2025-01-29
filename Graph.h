@@ -8,14 +8,12 @@ class Graph
 	public:
 		Graph();
 		void AddVertex(int vnumber, std::string name);
-		void addEdge(int v1, int v2, int weight = 1);
-		void depth(int start);
+		void addEdge(int v1, int v2, int weight = 1);		
 		void findMinDistanceDecstr(int fromVert);
 		bool edgeExists(int v1, int v2);
 		bool vertexExists(int vnumber);
 
-private:
-	void depthInner(int current, bool visited[]);
+private:	
 	int matrix[SIZE][SIZE];
 	int vertexes[SIZE];
 	std::string names[SIZE];

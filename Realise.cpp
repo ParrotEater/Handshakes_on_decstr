@@ -20,26 +20,6 @@ void Graph::addEdge(int v1, int v2, int weight)
 	matrix[v1][v2] = weight;
 	matrix[v2][v1] = weight;
 }
-void Graph::depth(int start)
-{
-	bool visited[SIZE];
-	for (int i = 0; i < SIZE; i++)
-		visited[i] = false;
-	depthInner(start, visited);
-}
-void Graph::depthInner(int current, bool visited[])
-{
-	std::cout << "V" << current << ", ";
-	visited[current] = true;
-	for (int i = 0; i < vertexCount; i++)
-	{
-		int vnum = vertexes[i];
-		if (matrix[current][vnum] != 0 && !visited[vnum]) //проверка смежности с другими вершинами
-		{
-			depthInner(vnum, visited);
-		}
-	}
-}
 
 bool Graph::edgeExists(int v1, int v2)
 {

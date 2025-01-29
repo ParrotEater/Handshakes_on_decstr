@@ -25,10 +25,7 @@ int main() {
     g.addEdge(4, 5);
 
     for(int i = 0; i < vert_id; i++)
-        g.findMinDistanceDecstr(i);
+        g.findMinDistanceDecstr(i);      
 
-    
-    
-    // g.depth(0);
     return 0;
 }
